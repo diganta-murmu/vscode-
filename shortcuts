@@ -1,0 +1,92 @@
+[
+    
+    {
+        "key": "shift+enter",
+        "command": "editor.action.duplicateSelection"
+    },
+    {
+        "key": "shift+backspace",
+        "command": "runCommands",
+        "args": {
+            "commands": [
+                "editor.action.deleteLines",
+                "cursorUp",
+                "cursorEnd"
+            ]
+        }
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "editor.action.moveLinesDownAction"
+    },
+    {
+        "key": "ctrl+backspace",
+        "command": "editor.action.moveLinesUpAction"
+    },
+
+    // {
+    //     "key": "tab",
+    //     "command": "jumpToNextSnippetPlaceholder",
+    //     "when": "editorTextFocus && editorHasNextTabStop"
+    // },
+    {
+        "key": "escape",
+        "command": "jumpToNextSnippetPlaceholder",
+        "when": "editorTextFocus && inSnippetMode"
+    },
+    {
+        "key": "tab",
+        "command": "editor.action.inlineSuggest.commit",
+        "when": "editorTextFocus && inlineSuggestionVisible && !inSnippetMode"
+    },
+    {
+        "key": "tab",
+        "command": "cursorRight",
+        "when": "editorTextFocus && !editorHasSelection && followingText =~ /^([)}\\]\"']+|->)/ && !editorLineEmpty"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.closePanel"
+    },
+    {
+        "key": "ctrl+escape",
+        "command": "workbench.action.terminal.killAll"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "workbench.action.toggleMaximizedPanel"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.closePanel",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+escape",
+        "command": "workbench.action.terminal.hideFind",
+        "when": "terminalFindVisible && terminalFocusInAny && terminalHasBeenCreated || terminalFindVisible && terminalFocusInAny && terminalProcessSupported"
+    },
+    {
+        "key": "escape",
+        "command": "-workbench.action.terminal.hideFind",
+        "when": "terminalFindVisible && terminalFocusInAny && terminalHasBeenCreated || terminalFindVisible && terminalFocusInAny && terminalProcessSupported"
+    },
+    {
+        "key": "left",
+        "command": "workbench.action.terminal.clearSelection",
+        "when": "terminalFocusInAny && terminalHasBeenCreated && terminalTextSelected && !terminalFindVisible || terminalFocusInAny && terminalProcessSupported && terminalTextSelected && !terminalFindVisible"
+    },
+    {
+        "key": "escape",
+        "command": "workbench.action.closePanel",
+        "when": "terminalFocusInAny && terminalHasBeenCreated && terminalTextSelected && !terminalFindVisible || terminalFocusInAny && terminalProcessSupported && terminalTextSelected && !terminalFindVisible"
+    },
+    {
+        "key": "ctrl+escape",
+        "command": "workbench.action.terminal.killAll",
+        "when": "terminalFindVisible && terminalFocusInAny && terminalHasBeenCreated || terminalFindVisible && terminalFocusInAny && terminalProcessSupported"
+    },
+    
+
+
+]
